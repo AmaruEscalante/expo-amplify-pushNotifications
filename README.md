@@ -6,3 +6,6 @@ https://medium.com/abn-amro-developer/a-guide-to-implement-push-notifications-wi
 The project has the following architecture
 
 ![](docs/img/0_9NvAQMoM-NgxTWnD.png)
+
+- This code has only been tested in Android with the Expo Go app.
+- For the SDK you still need to do extra steps, see the following comment in the original blog post: https://dev.to/jackatdev/comment/nin4
