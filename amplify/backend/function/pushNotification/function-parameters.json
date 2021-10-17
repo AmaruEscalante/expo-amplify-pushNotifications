@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "api": {
+      "pushAPI": [
+        "Query",
+        "Mutation",
+        "Subscription"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

@@ -1,21 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { withAuthenticator } from "aws-amplify-react-native";
+import Amplify, { Analytics } from "aws-amplify";
+// Get the aws resources configuration parameters
+import awsconfig from "./src/aws-exports"; // if you are using Amplify CLI
+import Main from "./src/Main";
+Amplify.configure(awsconfig);
+Analytics.disable(); // disabled analytics otherwise you get annoying messages
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+const App = () => {
+  return <Main />;
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default withAuthenticator(App);
